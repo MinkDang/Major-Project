@@ -1,0 +1,268 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+html {
+	font-size: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	min-width: 1000px;
+	margin: 0;
+}
+
+body {
+	margin: 100px 0 100px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: #f1f1f1;
+	font-family: "Roboto", sans-serif;
+	width: 800px;
+}
+
+h1 {
+	width: 800px;
+	font-weight: 100;
+	margin: 40px 0 2px 0;
+}
+
+h2 {
+	margin: 0 0 0 2px;
+}
+
+p {
+	width: 800px;
+	margin: 0;
+}
+
+strong {
+	background-color: #508991;
+	color: white;
+	margin-left: 10px;
+	padding: 2px 5px;
+	border-radius: 5px;
+}
+
+input,
+select {
+	font-size: 20px;
+	border-radius: 5px;
+	border-width: thin;
+}
+
+textarea {
+	resize: none;
+	font-size: 15px;
+}
+
+.box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	background-color: #e5e5e5;
+	border-radius: 10px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+		rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.box > div {
+	border-radius: 10px;
+	margin: 5px 10px;
+	padding: 0 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 40px;
+	cursor: pointer;
+}
+
+.box > div:hover {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+		rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.nohover:hover {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.vertical {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	padding-bottom: 5px;
+}
+
+.vertical > div {
+	margin: 5px 10px 0 10px;
+	cursor: default;
+}
+
+#suburb,
+#postcode,
+#street,
+#store {
+	display: none;
+}
+
+#submit,
+#reset {
+	padding: 10px;
+	margin-top: 40px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+		rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+		rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#submit:active,
+#reset:active {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+		rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+		rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#submit_reset {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+
+/*** DO NOT CHANGE ***/
+
+/* Top left logo */
+#logo {
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	left: 0;
+	top: 0;
+	position: fixed;
+}
+
+/* Price label */
+#price_label {
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	right: 0;
+	top: 0;
+	position: fixed;
+	background-color: #e5e5e559;
+	padding: 10px;
+	margin: 20px 20px 0 0;
+	border-radius: 10px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+		rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* Tooltip */
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+}
+
+.tooltiptext {
+	visibility: hidden;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	background-color: #cedcde;
+	color: #6c6061;
+	text-align: center;
+	padding: 0.5vh 1vh;
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	-webkit-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+	-webkit-box-shadow: 0.25vh 0.5vh 0.5vh rgba(0, 0, 0, 0.15);
+	box-shadow: 0.25vh 0.5vh 0.5vh rgba(0, 0, 0, 0.15);
+	border-radius: 0.5vh;
+	white-space: nowrap;
+}
+
+/* Top row */
+.top {
+	bottom: 130%;
+}
+
+/* Bottom row */
+.bottom {
+	top: 125%;
+}
+
+/* Mobile Support */
+.left,
+.right {
+	left: 0.1%;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
