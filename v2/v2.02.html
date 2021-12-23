@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Better support for mobile browsers -->
+	<title>Pizza Ordering - Customers</title>
+	<link rel="shortcut icon" type="image/png" href="../Assets/pizza.png" />
+	<link href="CSS/v2.02.css" rel="stylesheet" />
+	<link rel="stylesheet" href="CSS/tooltip.css">
+	<script src="JS/v2.02.js" type="text/javascript"></script>
+	<!-- Credit Card check from https://www.braemoor.co.uk/software/creditcard.shtml -->
+	<script src="JS/creditcard.js" type="text/javascript"></script>
+</head>
+
+<body onload="price_load(base_price); display_orders();">
+	<!-- Live price -->
+	<h1 id="price_label">
+		Price:
+		<strong id="price_display" style="font-size: 95%;"></strong>
+	</h1>
+
+	<!-- Top left logo -->
+	<div id="logo">
+		<img src="../Assets/Logo.png" alt="Logo" width="100vh">
+		<div id="menu">
+			<span data-tooltip="Account" data-tooltip-location="right" onclick="alert('Not available');">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-user">
+					<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+					<circle cx="12" cy="7" r="4"></circle>
+				</svg>
+			</span>
+
+			<span data-tooltip="Dark Mode" data-tooltip-location="right" onclick="alert('Not available');">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-moon">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+				</svg>
+			</span>
+
+			<span data-tooltip="Pizzeria's" data-tooltip-location="right" onclick="alert('Not available');">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-terminal">
+					<polyline points="4 17 10 11 4 5"></polyline>
+					<line x1="12" y1="19" x2="20" y2="19"></line>
+				</svg>
+			</span>
+
+			<span data-tooltip="Help" data-tooltip-location="right" onclick="location.href='../help.html';">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-help-circle">
+					<circle cx="12" cy="12" r="10"></circle>
+					<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+					<line x1="12" y1="17" x2="12.01" y2="17"></line>
+				</svg>
+			</span>
+
+			<span data-tooltip="GitHub Repo" data-tooltip-location="right"
+				onclick="location.href='https://github.com/MinkDang/Major-Project';">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-3 0 30 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-github">
+					<path
+						d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+					</path>
+				</svg>
+			</span>
+		</div>
+	</div>
+
+	<main>
+		<!-- Delivery type -->
+		<h1>Step 1: Order type</h1>
+		<form class="box">
+
+			<!-- Delivery -->
+			<label for="delivery" onclick="select_logistic(this)">
+				<h2>Delivery</h2>
+			</label>
+			<input id="delivery" type="radio" name="logistic" value="delivery">
+
+			<!-- Pick Up -->
+			<label for="pickup" onclick="select_logistic(this)">
+				<h2>Pick up</h2>
+			</label>
+			<input id="pickup" type="radio" name="logistic" value="pickup">
+
+			<!-- Order History -->
+			<label for="history" onclick="select_logistic(this)">
+				<h2>Order History</h2>
+			</label>
+			<input id="history" type="radio" name="history" value="history">
+		</form>
+
+		<!-- Time -->
+		<h1>Step 2: Time</h1>
+		<form class="box">
+			<label for="now" onclick="select_time(this)">
+				<h2>Now</h2>
+			</label>
+			<input id="now" type="radio" name="time" value="now">
+
+			<label for="later" onclick="select_time(this)">
+				<h2>Later</h2>
+			</label>
+			<input id="later" type="radio" name="time" value="later">
+
+			<input id="time_selection" type="datetime-local" onchange="log_time()" name="time_selection" required
+				readonly>
+		</form>
+
+		<!-- Contact details -->
+		<h1>Step 3: Contact details</h1>
+		<form class="box vertical" id="contacts">
+
+			<!-- First Name -->
+			<div>
+				<label for="f_name">
+					<h2>First Name</h2>
+				</label>
+				<input id="f_name" type="text" name="f_name" pattern="[a-zA-Z]*" oninput="this.reportValidity()"
+					required>
+			</div>
+
+			<!-- Last Name -->
+			<div>
+				<label for="l_name">
+					<h2>Last Name</h2>
+				</label>
+				<input id="l_name" type="text" name="l_name" pattern="[a-zA-Z]*" oninput="this.reportValidity()"
+					required>
+			</div>
+
+			<!-- Phone -->
+			<div>
+				<label for="phone">
+					<h2>Phone Number</h2>
+				</label>
+				<input id="phone" type="tel" name="phone" pattern="[0-9]{10}" maxlength="10"
+					oninput="this.reportValidity()" required>
+			</div>
+
+			<!-- Suburb -->
+			<div id="hide_1">
+				<label for="suburb">
+					<h2>Suburb</h2>
+				</label>
+				<input id="suburb" type="text" name="suburb" pattern="[a-zA-Z]*" oninput="this.reportValidity()">
+			</div>
+
+			<!-- Postcode -->
+			<div id="hide_2">
+				<label for="postcode">
+					<h2>Postcode</h2>
+				</label>
+				<input id="postcode" type="tel" name="postcode" pattern="[0-9]{4}" maxlength="4"
+					oninput="this.reportValidity()">
+			</div>
+
+			<!-- Address -->
+			<div id="hide_3">
+				<label for="address">
+					<h2>Address</h2>
+				</label>
+				<input id="address" type="text" name="address">
+			</div>
+
+			<!-- Store -->
+			<div id="hide_4">
+				<label for="store">
+					<h2>Store</h2>
+				</label>
+				<select id="store" name="store" style="width: 150px">
+					<option value="Glebe">Glebe</option>
+					<option value="Redfern">Redfern</option>
+					<option value="Paddington">Paddington</option>
+					<option value="Newtown">Newtown</option>
+				</select>
+			</div>
+		</form>
+
+		<!-- Pizza Base -->
+		<h1>Step 4: Pizza Base</h1>
+		<form class="box">
+
+			<!-- Supreme -->
+			<label for="supreme" onclick="select_base(this)">
+				<h2>Supreme</h2>
+				<strong>$ 17.65</strong>
+			</label>
+			<input id="supreme" type="radio" name="pizza_base" value="supreme">
+
+			<!-- Simply Cheese -->
+			<label for="simply_cheese" onclick="select_base(this)">
+				<h2>Simply Cheese</h2>
+				<strong>$ 5.50</strong>
+			</label>
+			<input id="simply_cheese" type="radio" name="pizza_base" value="simply_cheese">
+
+			<!-- Margherita -->
+			<label for="margherita" onclick="select_base(this)">
+				<h2>Margherita</h2>
+				<strong>$ 4.00</strong>
+			</label>
+			<input id="margherita" type="radio" name="pizza_base" value="margherita">
+		</form>
+
+		<!-- Toppings -->
+		<h1>Step 5: Select Toppings</h1>
+		<form class="box">
+
+			<!-- Anchovies -->
+			<label for="anchovies" onclick="select_toppings(this)">
+				<h2>Anchovies</h2>
+				<strong>+ $2</strong>
+			</label>
+			<input id="anchovies" type="checkbox" name="pizza_toppings" value="anchovies">
+
+			<!-- Jalapenos -->
+			<label for="jalapenos" onclick="select_toppings(this)">
+				<h2>Jalapenos</h2>
+				<strong>+ $1.80</strong>
+			</label>
+			<input id="jalapenos" type="checkbox" name="pizza_toppings" value="jalapenos">
+
+			<!-- Olives -->
+			<label for="olives" onclick="select_toppings(this)">
+				<h2>Olives</h2>
+				<strong>+ $2</strong>
+			</label>
+			<input id="olives" type="checkbox" name="pizza_toppings" value="olives">
+
+			<!-- Parmesan -->
+			<label for="parmesan" onclick="select_toppings(this)">
+				<h2>Parmesan</h2>
+				<strong>+ $1.30</strong>
+			</label>
+			<input id="parmesan" type="checkbox" name="pizza_toppings" value="parmesan">
+		</form>
+
+		<!-- Quantity -->
+		<h1>Step 6: Select Quantity</h1>
+		<form class="box">
+			<div>
+				<input id="quantity" name="quantity" type="number" min="1" max="30" value="1" size="2"
+					onkeyup="imposeMinMax(this);" oninput="log_quantity()"
+					onkeydown="return (event.keyCode!=189 && event.keyCode!=187 && event.keyCode!=43 && event.keyCode!=32);" />
+			</div>
+			<!-- Minus sign is blocked, Plus sign can still be inputted but validation will stop any invalid input -->
+		</form>
+
+		<!-- Payment -->
+		<h1>Step 7: Payment</h1>
+		<p style="margin-bottom: 3px;">Leave blank if paying later</p>
+		<p>Card Number field is locked after valid Credit Card</p>
+		<div class="box vertical">
+			<div>
+				<button type="button" onclick="cardsample()">Autofill samples</button>
+				<div style="margin-left: 10px">
+					<select id="CardType" style="width: 200px"
+						onchange="document.getElementById('CardNumber').readOnly = false">
+						<option value="AmEx">American Express</option>
+						<option value="CarteBlanche">Carte Blanche</option>
+						<option value="DinersClub">Diners Club</option>
+						<option value="Discover">Discover</option>
+						<option value="EnRoute">enRoute</option>
+						<option value="JCB">JCB</option>
+						<option value="Maestro">Maestro</option>
+						<option value="MasterCard">MasterCard</option>
+						<option value="Solo">Solo</option>
+						<option value="Switch">Switch</option>
+						<option value="Visa">Visa</option>
+						<option value="VisaElectron">Visa Electron</option>
+						<option value="LaserCard">Laser</option>
+					</select>
+				</div>
+			</div>
+			<div>
+				<input type="text" id="CardNumber" maxlength="24" size="24" placeholder="Credit Card Number" />
+			</div>
+		</div>
+
+		<div id="submit_reset">
+			<!-- Submit -->
+			<div class="box" id="submit" onclick="push_obj()">
+				<h2 style="cursor: pointer">Submit</h2>
+			</div>
+
+			<!-- Clear field -->
+			<div class="box" id="reset" style="margin-left: 50px" onclick="reset_field()">
+				<h2 style="cursor: pointer">Reset</h2>
+			</div>
+		</div>
+	</main>
+
+
+	<!-- Array of Records -->
+	<h1>Array of Records</h1>
+	<p>* "Null" means No entry</p>
+	<div class="box">
+		<textarea cols="90" rows="10" readonly></textarea>
+	</div>
+</body>
+
+</html>
