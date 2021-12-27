@@ -1,0 +1,298 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+html {
+	font-size: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	min-width: 1050px;
+	margin: 0;
+}
+
+body {
+	margin: 70px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: #f1f1f1;
+	font-family: "Roboto", sans-serif;
+	width: 800px;
+}
+
+h1 {
+	width: 800px;
+	font-weight: 100;
+	margin: 40px 0 2px 0;
+}
+
+h2 {
+	margin: 0 0 0 2px;
+}
+
+p {
+	width: 800px;
+	margin: 0 0 10px 0;
+}
+
+strong {
+	background-color: #508991;
+	color: white;
+	margin-left: 10px;
+	padding: 2px 5px;
+	border-radius: 5px;
+	white-space: nowrap;
+	font-size: large;
+}
+
+input,
+select {
+	font-size: 20px;
+	border-radius: 5px;
+	border-width: thin;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="text"] {
+	text-transform: capitalize;
+}
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+	background-color: #e7b84b;
+}
+
+.nodoubleclick {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+textarea {
+	resize: vertical;
+	font-size: 15px;
+	min-height: 50px;
+}
+
+.box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	background-color: #e5e5e5;
+	border-radius: 10px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+		rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.box > div,
+.box > label {
+	border-radius: 10px;
+	margin: 5px 10px;
+	padding: 0 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 40px;
+	cursor: pointer;
+}
+
+.box > label:hover,
+#menu svg:hover {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+		rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	transition: all 0.1s;
+}
+
+#contacts > div > label {
+	margin-right: 10px;
+}
+
+#contacts > div > input,
+#CardNumber {
+	padding-left: 5px;
+}
+
+#contacts > div:nth-last-child(-n + 4) {
+	display: none;
+}
+
+#time_selection {
+	padding-left: 5px;
+	margin: 0 10px;
+	width: 275px !important;
+}
+
+.vertical {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	padding-bottom: 5px;
+}
+
+.vertical > div {
+	margin: 5px 10px 0 10px;
+}
+
+#submit,
+#reset {
+	padding: 10px;
+	margin-top: 40px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+		rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+		rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#submit:active,
+#reset:active {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+		rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+		rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: all 0.2s;
+}
+
+#submit_reset {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+
+/* Top left logo */
+#logo {
+	display: flex;
+	flex-direction: column;
+	left: 0;
+	top: 0;
+	position: fixed;
+	width: min-content;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Side menu */
+#menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+#menu span {
+	width: 50%;
+	height: 50%;
+	margin: 5px;
+}
+
+#menu > span > svg {
+	width: 80%;
+	height: auto;
+	padding: 5px;
+	border-radius: 30px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+		rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.feather,
+#random {
+	stroke: #b8b8b8;
+	transition: all 0.2s;
+	transform-origin: 50% 50%;
+}
+
+.feather:hover,
+#random:hover {
+	stroke: #508991;
+	transform: scale(1.2);
+}
+
+#random:hover > g > path {
+	fill: #508991;
+}
+
+/* Price label */
+#price_label {
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	right: 0;
+	top: 0;
+	position: fixed;
+	background-color: #e5e5e559;
+	padding: 10px;
+	margin: 20px 20px 0 0;
+	border-radius: 10px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+		rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
