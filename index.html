@@ -14,7 +14,7 @@
 	<a href="https://minhdangwork.notion.site/Build-b99cdbf3a1244a35a886dc8a3602236c">notion.so</a>
 	<h1>Version 1</h1>
 	<p>
-		<a href="./v1/v1.01.html">v1.01</a> shows the structure of the page with simple <code>JavaScript</code>
+		<a href="./v1/v1.01.html">v1.01</a> shows the structure of the page with simple <code>JS</code>
 	</p>
 	<p>
 		<a href="./v1/v1.02.html">v1.02</a> optimises <code>v1.01</code> and works on minor functions
@@ -79,7 +79,74 @@
 		</ul>
 	</details>
 	</p>
-
+	<p>
+		<a href="./v2/v2.06.html">v2.06</a> focuses on code styling and optimisation of the code base
+	<ul>
+		<li>
+			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript">MDN JS
+				Guidelines</a>
+		</li>
+		<li>
+			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/HTML">MDN HTML
+				Guidelines</a>
+		</li>
+		<li>
+			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/CSS">MDN CSS Guidelines</a>
+		</li>
+		<li>
+			<a href="https://github.com/airbnb/javascript">Airbnb JS Guidelines</a>
+		</li>
+	</ul>
+	<details>
+		<summary>List of improvements</summary>
+		<ul>
+			<li><strong><code>HTMl</code></strong>
+				<ul>
+					<li>Matching MDN HTML Guidelines</li>
+					<li>Change sidebar container from <code>span</code> to <code>a</code> for native site linkings</li>
+					<li>Update quantity keystroke block from <code>event.keycode</code> <i>(deprecated)</i> to
+						<code>event.key</code>
+					</li>
+					<li>Submit and Reset is now <code>button</code> instead of <code>div</code></li>
+				</ul>
+			</li>
+			<li><strong><code>HTML & JS</code></strong>
+				<ul>
+					<li>Trigger events on input instead of label to increase accessibility</li>
+					<li>Move events to JS (remove all function call from HTMl)</li>
+					<li>Remove Credit Card <code>readOnly</code></li>
+					<li>Better <code>regex</code> validation</li>
+				</ul>
+			</li>
+			<li><strong><code>JS</code></strong>
+				<ul>
+					<li>Matching Airbnb and MDN Guidelines</li>
+					<li><a href="https://eslint.org/">ESlint</a> used</li>
+					<li>Different time input styling for Chome</li>
+					<li>More <code>arrow function</code> usage</li>
+					<li>More ternary operator whenever possible</li>
+					<li>Logistic Handling is shorten (20 lines to 15 lines)</li>
+					<li><code>Dictionaries</code> are used to replace <code>if else</code> if possible</li>
+					<li>Intervals are global variables</li>
+					<li>Let <code>enforceTimeRestrictions()</code> handle time update in when user chooses "Now"</li>
+					<li>Submit button blurred when there are errors within the order</li>
+					<li><code>textarea</code> scroll to bottom when appending order</li>
+					<li><code>input</code> related errors in resetButton is fixed</li>
+				</ul>
+			</li>
+			<li><strong><code>CSS</code></strong>
+				<ul>
+					<li>Matching MDN CSS Guidelines</li>
+					<li><code>:focus-visible</code> used to increase accessibility</li>
+					<li>Remove unnecessary vendor prefixes, rules</li>
+					<li><code>input</code> display is not <code>none</code>, <code>opacity: 0; margin: 0;</code> is used
+						instead to increase accessibility</li>
+					<li>Smoother animation</li>
+				</ul>
+			</li>
+		</ul>
+	</details>
+	</p>
 </body>
 
 </html>
