@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Free Web tutorials">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Better support for mobile browsers -->
+	<title>Pizza Ordering - Customers</title>
+	<link rel="shortcut icon" type="image/png" href="../Assets/pizza.png" />
+	<link href="CSS/v2.07.css" rel="stylesheet" />
+	<script src="JS/v2.07.js" defer></script>
+	<!-- Credit Card check from https://www.braemoor.co.uk/software/creditcard.shtml -->
+	<script src="JS/creditcard.js"></script>
+</head>
+
+<body>
+	<!-- Top left logo -->
+	<a class="skip-nav-link" href="#app-body">Skip Navigation</a>
+	<nav>
+		<img src="../Assets/Logo.png" alt="Logo" width="100vh">
+		<div id="options-buttons">
+			<a href="javascript:void(0);" data-tooltip="Account" data-tooltip-location="right">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-user">
+					<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+					<circle cx="12" cy="7" r="4"></circle>
+				</svg>
+			</a>
+
+			<a href="javascript:void(0);" data-tooltip="Dark Mode" data-tooltip-location="right">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-moon">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+				</svg>
+			</a>
+
+			<a href="javascript:void(0);" data-tooltip="Pizzeria Interface" data-tooltip-location="right">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-terminal">
+					<polyline points="4 17 10 11 4 5"></polyline>
+					<line x1="12" y1="19" x2="20" y2="19"></line>
+				</svg>
+			</a>
+
+			<a data-tooltip="Help" data-tooltip-location="right" href="../help.html">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-help-circle">
+					<circle cx="12" cy="12" r="10"></circle>
+					<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+					<line x1="12" y1="17" x2="12.01" y2="17"></line>
+				</svg>
+			</a>
+
+			<a data-tooltip="GitHub Repo" data-tooltip-location="right" target="_blank" rel="noopener noreferrer"
+				href="https://github.com/MinkDang/Major-Project">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-3 0 30 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-github">
+					<path
+						d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+					</path>
+				</svg>
+			</a>
+
+			<a href="javascript:void(0);" data-tooltip="Random Pizza" data-tooltip-location="right" id="random-button">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="height: 40px; width: 40px;"
+					id="random">
+					<path d="M0 0h512v512H0z" fill="none" fill-opacity="1"></path>
+					<g class="" transform="translate(0,0)">
+						<path
+							d="M255.76 44.764c-6.176 0-12.353 1.384-17.137 4.152L85.87 137.276c-9.57 5.536-9.57 14.29 0 19.826l152.753 88.36c9.57 5.536 24.703 5.536 34.272 0l152.753-88.36c9.57-5.535 9.57-14.29 0-19.825l-152.753-88.36c-4.785-2.77-10.96-4.153-17.135-4.153zm1.86 12.423a31.953 18.96 0 0 1 21.194 5.536 31.953 18.96 0 0 1-45.187 26.812 31.953 18.96 0 0 1 23.992-32.347zm-119.173 70.188a31.953 18.96 0 0 1 .002 0 31.953 18.96 0 0 1 21.195 5.535 31.953 18.96 0 0 1-45.19 26.813 31.953 18.96 0 0 1 23.992-32.348zm118.24.244a31.953 18.96 0 0 1 22.125 32.362 31.953 18.96 0 1 1-45.187-26.812 31.953 18.96 0 0 1 23.06-5.55zm119.663.015a31.953 18.96 0 0 1 .002 0 31.953 18.96 0 0 1 21.195 5.535 31.953 18.96 0 0 1-45.19 26.812 31.953 18.96 0 0 1 23.993-32.347zM75.67 173.84c-5.753-.155-9.664 4.336-9.664 12.28v157.696c0 11.052 7.57 24.163 17.14 29.69l146.93 84.848c9.57 5.526 17.14 1.156 17.14-9.895V290.76c0-11.052-7.57-24.16-17.14-29.688l-146.93-84.847c-2.69-1.555-5.225-2.327-7.476-2.387zm360.773.002c-2.25.06-4.783.83-7.474 2.385l-146.935 84.847c-9.57 5.527-17.14 18.638-17.14 29.69v157.7c0 11.05 7.57 15.418 17.14 9.89L428.97 373.51c9.57-5.527 17.137-18.636 17.137-29.688v-157.7c0-7.942-3.91-12.432-9.664-12.278zM89.297 195.77a31.236 18.008 58.094 0 1 33.818 41.183 31.236 18.008 58.094 1 1-45-25.98 31.236 18.008 58.094 0 1 11.182-15.203zm333.52 0A18.008 31.236 31.906 0 1 434 210.973a18.008 31.236 31.906 0 1-45 25.98 18.008 31.236 31.906 0 1 33.818-41.183zm-165.198 2.314a31.953 18.96 0 0 1 21.194 5.535 31.953 18.96 0 0 1-45.187 26.812 31.953 18.96 0 0 1 23.992-32.348zm109.198 30.018A18.008 31.236 31.906 0 1 378 243.305a18.008 31.236 31.906 0 1-45 25.98 18.008 31.236 31.906 0 1 33.818-41.183zm-165.52 32.332a31.236 18.008 58.094 0 1 33.817 41.183 31.236 18.008 58.094 1 1-45-25.98 31.236 18.008 58.094 0 1 11.182-15.203zm109.52 0A18.008 31.236 31.906 0 1 322 275.637a18.008 31.236 31.906 0 1-45 25.98 18.008 31.236 31.906 0 1 33.818-41.183zM89.298 318.48a31.236 18.008 58.094 0 1 33.817 41.184 31.236 18.008 58.094 1 1-45-25.98 31.236 18.008 58.094 0 1 11.182-15.204zm333.52 0A18.008 31.236 31.906 0 1 434 333.684a18.008 31.236 31.906 0 1-45 25.98 18.008 31.236 31.906 0 1 33.818-41.184zm-56 32.332A18.008 31.236 31.906 0 1 378 366.017a18.008 31.236 31.906 0 1-45 25.98 18.008 31.236 31.906 0 1 33.818-41.183zm-165.52 32.33a31.236 18.008 58.094 0 1 33.817 41.184 31.236 18.008 58.094 1 1-45-25.98 31.236 18.008 58.094 0 1 11.182-15.203zm109.52 0A18.008 31.236 31.906 0 1 322 398.347a18.008 31.236 31.906 0 1-45 25.98 18.008 31.236 31.906 0 1 33.818-41.183z"
+							fill="#b8b8b8" fill-opacity="1"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</nav>
+
+	<div id="app-body">
+		<main id="main-content">
+			<!-- Delivery type -->
+			<h1>Step 1: Order type</h1>
+			<form class="container">
+				<!-- Delivery -->
+				<input id="delivery" type="radio" name="logistic" value="delivery">
+				<label for="delivery" class="nodoubleclick">
+					<h2>Delivery</h2>
+				</label>
+				<!-- Pick Up -->
+				<input id="pickup" type="radio" name="logistic" value="pickup">
+				<label for="pickup" class="nodoubleclick">
+					<h2>Pick up</h2>
+				</label>
+				<!-- Order History -->
+				<input id="history" type="radio" name="logistic" value="history">
+				<label for="history" class="nodoubleclick">
+					<h2>Order History</h2>
+				</label>
+			</form>
+			<!-- Time -->
+			<h1>Step 2: Time</h1>
+			<p>Time are in 15-minute intervals</p>
+			<form class="container">
+				<input id="now" type="radio" name="time" value="now">
+				<label for="now" class="nodoubleclick">
+					<h2>Now</h2>
+				</label>
+				<input id="later" type="radio" name="time" value="later">
+				<label for="later" class="nodoubleclick">
+					<h2>Later</h2>
+				</label>
+				<input id="time_selection" type="datetime-local" step="900" name="time_selection" required readonly>
+			</form>
+			<!-- Contact details -->
+			<h1>Step 3: Contact details</h1>
+			<form class="container vertical" id="contacts">
+				<!-- First Name -->
+				<div>
+					<label for="f-name">
+						<h2>First Name</h2>
+					</label>
+					<input id="f-name" type="text" name="f-name" maxlength="20" autocomplete="given-name" required
+						pattern="^[a-zA-z,.'-]{2,}( [a-zA-z,.'-]+)*$$">
+				</div>
+				<!-- Last Name -->
+				<div>
+					<label for="l-name">
+						<h2>Last Name</h2>
+					</label>
+					<input id="l-name" type="text" name="l-name" maxlength="20" autocomplete="family-name" required
+						pattern="^[a-zA-z,.'-]{2,}( [a-zA-z,.'-]+)*$">
+				</div>
+				<!-- Phone -->
+				<div>
+					<label for="phone">
+						<h2>Phone</h2>
+					</label>
+					<input id="phone" type="tel" name="phone" maxlength="10" pattern="^0([1-5]|[7-8])\d{8}" required>
+				</div>
+				<!-- Suburb -->
+				<div>
+					<label for="suburb">
+						<h2>Suburb</h2>
+					</label>
+					<input id="suburb" type="text" name="suburb" maxlength="20"
+						pattern="^[a-zA-z,.'-]{2,}( [a-zA-z,.'-]+)*$">
+				</div>
+				<!-- Postcode -->
+				<div>
+					<label for="postcode">
+						<h2>Postcode</h2>
+					</label>
+					<input id="postcode" type="tel" name="postcode" maxlength="4"
+						pattern="^2(([0-5]\d{2})|([6-8](([1][9])|([2-9]\d)))|([9](([2][1-9])|[3-9]\d)))"
+						title="NSW Post Code only (Exclude PO Boxes and LVRs)">
+				</div>
+				<!-- Address -->
+				<div>
+					<label for="address">
+						<h2>Address</h2>
+					</label>
+					<input id="address" type="text" name="address" autocomplete="street-address"
+						pattern="\d+(\/\d+[A-za-z]?)? ([A-Za-z0-9]+ )+(Avenue|Lane|Road|Boulevard|Drive|Street|Close|Crescent|Cres|Ave|Dr|Rd|Blvd|Ln|St|Cl)\.?$">
+				</div>
+				<!-- Store -->
+				<div>
+					<label for="store">
+						<h2>Store</h2>
+					</label>
+					<select id="store" name="store">
+						<option value="Glebe">Glebe</option>
+						<option value="Redfern">Redfern</option>
+						<option value="Paddington">Paddington</option>
+						<option value="Newtown">Newtown</option>
+					</select>
+				</div>
+			</form>
+			<!-- Pizza Base -->
+			<h1>Step 4: Pizza Base</h1>
+			<form class="container">
+				<!-- Supreme -->
+				<input id="supreme" type="radio" name="pizza_base" value="supreme">
+				<label for="supreme" class="nodoubleclick">
+					<h2>Supreme</h2>
+					<strong>$ 17.65</strong>
+				</label>
+				<!-- Simply Cheese -->
+				<input id="simply_cheese" type="radio" name="pizza_base" value="simply_cheese">
+				<label for="simply_cheese" class="nodoubleclick">
+					<h2>Simply Cheese</h2>
+					<strong>$ 5.50</strong>
+				</label>
+				<!-- Margherita -->
+				<input id="margherita" type="radio" name="pizza_base" value="margherita">
+				<label for="margherita" class="nodoubleclick">
+					<h2>Margherita</h2>
+					<strong>$ 4.00</strong>
+				</label>
+			</form>
+			<!-- Toppings -->
+			<h1>Step 5: Select Toppings</h1>
+			<form class="container">
+				<!-- Anchovies -->
+				<input id="anchovies" type="checkbox" name="pizza_toppings" value="anchovies">
+				<label for="anchovies" class="nodoubleclick">
+					<h2>Anchovies</h2>
+					<strong>+ $2</strong>
+				</label>
+				<!-- Jalapenos -->
+				<input id="jalapenos" type="checkbox" name="pizza_toppings" value="jalapenos">
+				<label for="jalapenos" class="nodoubleclick">
+					<h2>Jalapenos</h2>
+					<strong>+ $1.80</strong>
+				</label>
+				<!-- Olives -->
+				<input id="olives" type="checkbox" name="pizza_toppings" value="olives">
+				<label for="olives" class="nodoubleclick">
+					<h2>Olives</h2>
+					<strong>+ $2</strong>
+				</label>
+				<!-- Parmesan -->
+				<input id="parmesan" type="checkbox" name="pizza_toppings" value="parmesan">
+				<label for="parmesan" class="nodoubleclick">
+					<h2>Parmesan</h2>
+					<strong>+ $1.30</strong>
+				</label>
+			</form>
+			<!-- Quantity -->
+			<h1>Step 6: Select Quantity</h1>
+			<form class="container">
+				<div>
+					<input id="quantity" name="quantity" type="number" min="1" max="30" value="1" size="2"
+						onkeydown="return (event.key!='-' && event.key!='+' && event.key!=' ' && event.key!='.' && event.key!='Enter');">
+				</div>
+			</form>
+			<!-- Payment -->
+			<h1>Step 7: Payment</h1>
+			<p>Leave blank if paying later</p>
+			<div class="container vertical">
+				<div>
+					<button style="margin-right: 10px;" type="button" id="autofill-card"
+						title="Autofill Card Sample">Autofill samples</button>
+					<select id="card-type">
+						<option value="AmEx">American Express</option>
+						<option value="CarteBlanche">Carte Blanche</option>
+						<option value="DinersClub">Diners Club</option>
+						<option value="Discover">Discover</option>
+						<option value="EnRoute">enRoute</option>
+						<option value="JCB">JCB</option>
+						<option value="Maestro">Maestro</option>
+						<option value="MasterCard">MasterCard</option>
+						<option value="Solo">Solo</option>
+						<option value="Switch">Switch</option>
+						<option value="Visa">Visa</option>
+						<option value="VisaElectron">Visa Electron</option>
+						<option value="LaserCard">Laser</option>
+					</select>
+				</div>
+				<div style="width: 89%;">
+					<input type="text" id="card-number" maxlength="24" size="24" placeholder="Credit Card Number">
+				</div>
+				<span id="cc-message" style="align-self: flex-start; margin-left: 20px; max-width: 320px"></span>
+			</div>
+			<div id="submit_reset">
+				<!-- Submit -->
+				<button class="container" id="submit-button">
+					<h2 style="cursor: pointer">Submit</h2>
+				</button>
+				<!-- Clear field -->
+				<button class="container" id="reset-button" style="margin-left: 50px">
+					<h2 style="cursor: pointer">Reset</h2>
+				</button>
+			</div>
+			<!-- Array of Records -->
+			<h1>Array of Records</h1>
+			<p>* "Null" means No entry</p>
+			<div class="container">
+				<textarea cols="90" rows="10" readonly></textarea>
+			</div>
+		</main>
+	</div>
+
+	<div id="notification-area"></div>
+
+	<!-- Live price -->
+	<aside>
+		<h1>Your Order</h1>
+		<h2 id="price-display">
+			Price:
+			<strong id="price-data" style="font-size: 95%; margin: 0;"></strong>
+		</h2>
+	</aside>
+
+</body>
+
+</html>
