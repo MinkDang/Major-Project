@@ -30,7 +30,10 @@
         ],
         "indent": [
             "error",
-            "tab"
+            "tab", 
+            {
+                "SwitchCase": 1
+            }
         ],
         "key-spacing": "warn",
         "space-before-blocks": "error",
