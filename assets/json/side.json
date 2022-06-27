@@ -1,0 +1,153 @@
+{
+    "sides": [
+        {
+            "name": "Jalapeno Cheese Bites - 20 pack",
+            "tag": [],
+            "energy": "5300 kJ",
+            "description": "Spicy jalapeno, oozy cheese & juicy corn wrapped up in a crispy crumb.",
+            "price": "22.50",
+            "imageDir": "sides-jalapeno-cheese-bites-20-pack-sides"
+        },
+        {
+            "name": "Jalapeno Cheese Bites - 10 pack",
+            "tag": [],
+            "energy": "2650 kJ",
+            "description": "Spicy jalapeno, oozy cheese & juicy corn wrapped up in a crispy crumb.",
+            "price": "9.95",
+            "imageDir": "sides-jalapeno-cheese-bites-10-pack-sides"
+        },
+        {
+            "name": "Jalapeno Cheese Bites - 6 pack",
+            "tag": [],
+            "energy": "1590 kJ",
+            "description": "Spicy jalapeno, oozy cheese & juicy corn wrapped up in a crispy crumb.",
+            "price": "5.95",
+            "imageDir": "sides-jalapeno-cheese-bites-6-pack-sides"
+        },
+        {
+            "name": "Triple Dippers",
+            "tag": [],
+            "energy": "8079 kJ",
+            "description": "10 Cheesy Breadsticks, 4 Seasoned Chicken Wings and 8 Cheesy Spud Bites with 3 dips",
+            "price": "11.95",
+            "imageDir": "sides-triple-dippers-sides"
+        },
+        {
+            "name": "Vegan Cheesy Garlic Bread",
+            "tag": [
+                "vegan",
+                "vegetarian"
+            ],
+            "energy": "2500 kJ",
+            "description": "Hot, oven baked loaf of garlic bread, topped with melted vegan mozzarella cheese",
+            "price": "6.95",
+            "imageDir": "sides-vegan-cheesy-garlic-bread-sides"
+        },
+        {
+            "name": "Cheesy Garlic Bread",
+            "tag": [
+                "vegetarian"
+            ],
+            "energy": "2703 kJ",
+            "description": "Hot, oven baked loaf of garlic bread. Topped with melted mozzarella cheese",
+            "price": "5.95",
+            "imageDir": "sides-cheesy-garlic-bread-sides"
+        },
+        {
+            "name": "Garlic Bread",
+            "tag": [
+                "vegan",
+                "vegetarian"
+            ],
+            "energy": "2278 kJ",
+            "description": "Hot, oven baked traditional garlic bread ",
+            "price": "4.95",
+            "imageDir": "sides-garlic-bread-sides"
+        },
+        {
+            "name": "Spud Bites",
+            "tag": [
+                "vegan",
+                "vegetarian"
+            ],
+            "energy": "1790 kJ",
+            "description": "Crunchy bite-sized potato spud bites, with a tomato dip",
+            "price": "5.45",
+            "imageDir": "sides-spud-bites-lge-sides"
+        },
+        {
+            "name": "Hot Chips Large",
+            "tag": [
+                "vegan",
+                "vegetarian"
+            ],
+            "energy": "2114 kJ",
+            "description": "A large portion of hot chips, crisped to perfection in the oven. ",
+            "price": "5.45",
+            "imageDir": "sides-hot-chips-lge-sides"
+        },
+        {
+            "name": "Cheesy Spud Bites",
+            "tag": [],
+            "energy": "1261 kJ",
+            "description": "Cheddar and mozzarella cheese spud bites & tomato dip",
+            "price": "5.45",
+            "imageDir": "sides-cheesy-spud-bites-sides"
+        },
+        {
+            "name": "Hot Chips Regular",
+            "tag": [
+                "vegan",
+                "vegetarian"
+            ],
+            "energy": "1617 kJ",
+            "description": "A regular portion of hot chips, crisped to perfection in the oven. ",
+            "price": "3.95",
+            "imageDir": "sides-hot-chips-reg-sides"
+        }
+    ],
+    "dips": [
+        {
+            "name": "Creamy Garlic Dip",
+            "tag": [
+                "vegetarian"
+            ],
+            "energy": "524 kJ",
+            "description": "Creamy white dip with flecks of ground pepper and garlic",
+            "price": "0.95",
+            "imageDir": "dips-creamy-garlic-sides"
+        },
+        {
+            "name": "Tomato Sauce Dip",
+            "tag": [
+                "vegan",
+                "vegetarian"
+            ],
+            "energy": "99 kJ",
+            "description": "Sweet tomato flavoured dip seasoned with herbs and spices",
+            "price": "0.95",
+            "imageDir": "dips-tomato-sides"
+        },
+        {
+            "name": "Sweet Chilli Dip",
+            "tag": [
+                "vegan",
+                "vegetarian"
+            ],
+            "energy": "151 kJ",
+            "description": "Sticky sweet dip with a hint of chilli, garlic and red capsicum",
+            "price": "0.95",
+            "imageDir": "dips-sweet-chilli-sides"
+        },
+        {
+            "name": "Ranch Dip",
+            "tag": [
+                "vegetarian"
+            ],
+            "energy": "448 kJ",
+            "description": "A creamy buttermilk based dip with hints of garlic",
+            "price": "0.95",
+            "imageDir": "dips-ranch-sides"
+        }
+    ]
+}

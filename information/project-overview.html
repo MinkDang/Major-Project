@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html data-theme="light" lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Major Project Overview">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Project Overview</title>
+	<link rel="shortcut icon" type="image/png" href="../assets/visual/pizza.png" />
+</head>
+
+<body>
+	<h2>Development Roadmap</h2>
+	<a href="https://minhdangwork.notion.site/Build-b99cdbf3a1244a35a886dc8a3602236c">notion.so</a>
+	<h1>Version 1</h1>
+	<p>
+		<a href="./v1/v1.01.html">v1.01</a> shows the structure of the page with simple <code>JS</code>
+	</p>
+	<p>
+		<a href="./v1/v1.02.html">v1.02</a> optimises <code>v1.01</code> and works on minor functions
+	</p>
+	<p>
+		<a href="./v1/v1.03.html">v1.03</a> focuses on array of records and input validation
+	</p>
+	<p>
+		<a href="./v1/v1.04.html">v1.04</a> focuses on reset button and optimisation of the code, especially enforcing
+		harsher validation
+	</p>
+	<h1>Version 2</h1>
+	<b>Please run files locally from releases as v3 has a vastly different file systems</b>
+	<p>
+		<a href="https://github.com/minh-dng/Major-Project/releases/tag/v2">v2.01</a> focuses on changing all possible
+		<code>div</code> to <code>form</code> which
+		would be beneficial for future database implementation
+	</p>
+	<p>
+		<a href="https://github.com/minh-dng/Major-Project/releases/tag/v2">v2.02</a> focuses on the floating side bar
+	</p>
+	<p>
+		<a href="https://github.com/minh-dng/Major-Project/releases/tag/v2">v2.03</a> focuses on using
+		<code>checked</code> attribute as a way to change buttons
+		colours
+	<details>
+		<summary>Problems</summary>
+		<p>
+		<ul>
+			<li>Selecting text on a label</li>
+			<li>Resetting undefined variables</li>
+		</ul>
+		Floating point errors that appears when 2 toppings are added and removed are mitigated
+		<strong>temporarily</strong>
+		through an <code>if</code> condition. Find more about these errors <a
+			href="https://floating-point-gui.de/">here</a></p>
+	</details>
+
+	<br>
+	An error that could not be resolved is related to the behaviour of <code>checked</code> attribute in
+	<code>checkbox</code>. This error does not prove to be dangerous to the user experience and security. It will be
+	patched if possible in future versions
+	</p>
+	<p>
+		<a href="https://github.com/minh-dng/Major-Project/releases/tag/v2">v2.04</a> focuses on randomise pizza choice.
+		The <code>checked</code> attribute bug is
+		still persist
+	</p>
+	<p>
+		<a href="https://github.com/minh-dng/Major-Project/releases/tag/v2">v2.05</a> focuses on
+		<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local">
+			<code>
+				datetime-local
+			</code>
+		</a>
+		behaviour. The <code>checked</code> attribute is fixed
+	<details>
+		<summary>Other Changes</summary>
+		<ul>
+			<li>Change how price is calculated</li>
+			<li>Let <code>checked</code> attribute decided by native behaviour</li>
+			<li>Min and Max <code>datetime-local</code> changes</li>
+			<li><code>datetime-local</code> box glowed when change is made</li>
+			<li>Update later time selection</li>
+			<li>Random button tooltip change when button is clicked</li>
+		</ul>
+	</details>
+	</p>
+	<p>
+		<a href="https://github.com/minh-dng/Major-Project/releases/tag/v2">v2.06</a> focuses on code styling and
+		optimisation of the code base
+	<ul>
+		<li>
+			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript">MDN JS
+				Guidelines</a>
+		</li>
+		<li>
+			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/HTML">MDN HTML
+				Guidelines</a>
+		</li>
+		<li>
+			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/CSS">MDN CSS Guidelines</a>
+		</li>
+		<li>
+			<a href="https://github.com/airbnb/javascript">Airbnb JS Guidelines</a>
+		</li>
+	</ul>
+	<details>
+		<summary>List of improvements</summary>
+		<ul>
+			<li><strong><code>HTML</code></strong>
+				<ul>
+					<li>Matching MDN HTML Guidelines</li>
+					<li>Change sidebar container from <code>span</code> to <code>a</code> for native site linking</li>
+					<li>Update quantity keystroke block from <code>event.keycode</code> <i>(deprecated)</i> to
+						<code>event.key</code>
+					</li>
+					<li>Submit and Reset is now <code>button</code> instead of <code>div</code></li>
+				</ul>
+			</li>
+			<li><strong><code>HTML & JS</code></strong>
+				<ul>
+					<li>Trigger events on input instead of label to increase accessibility</li>
+					<li>Move events to JS (remove all function call from HTML)</li>
+					<li>Remove Credit Card <code>readOnly</code></li>
+					<li>Better <code>regex</code> validation</li>
+				</ul>
+			</li>
+			<li><strong><code>JS</code></strong>
+				<ul>
+					<li>Matching Airbnb and MDN Guidelines</li>
+					<li><a href="https://eslint.org/">ESLint</a> used</li>
+					<li>Different time input styling for Chrome</li>
+					<li>More <code>arrow function</code> usage</li>
+					<li>More ternary operator whenever possible</li>
+					<li>Logistic Handling is shorten (20 lines to 15 lines)</li>
+					<li><code>Dictionaries</code> are used to replace <code>if else</code> if possible</li>
+					<li>Intervals are global variables</li>
+					<li>Let <code>enforceTimeRestrictions()</code> handle time update in when user chooses "Now"</li>
+					<li>Submit button blurred when there are errors within the order</li>
+					<li><code>textarea</code> scroll to bottom when appending order</li>
+					<li><code>input</code> related errors in resetButton is fixed</li>
+				</ul>
+			</li>
+			<li><strong><code>CSS</code></strong>
+				<ul>
+					<li>Matching MDN CSS Guidelines</li>
+					<li><code>:focus-visible</code> used to increase accessibility</li>
+					<li>Remove unnecessary vendor prefixes, rules</li>
+					<li><code>input</code> display is not <code>none</code>, <code>opacity: 0; margin: 0;</code> is used
+						instead to increase accessibility</li>
+					<li>Smoother animation</li>
+				</ul>
+			</li>
+		</ul>
+	</details>
+	</p>
+	<p>
+		<a href="https://github.com/minh-dng/Major-Project/releases/tag/v2">v2.07</a> focuses on changing how CSS works
+		fundamentally. <code>alert()</code> is
+		replaced by a pop up notification. Minor accessibility improvements are included.
+		A notable accessibility issues that will be mitigated in the future is the difficulty when selecting time
+		without a mouse. <code>datetime-local</code> is going to be replaced by a better alternative in the near future.
+	</p>
+	<h1>Version 3</h1>
+	<p>
+		<a href="../">v3.01</a> restruture how the pizza ordering system works, spanning across pages through the help
+		of
+		<code>localStorage</code> and <code>sessionStorage</code>. The code could be more modularised, for instance
+		<code>pizza.js</code>, <code>side.js</code>, <code>drink.js</code> has a fair bit of similarity regarding the
+		function that inject the <code>JSON</code> into HTML DOM. Some modules are in <code>menu.js</code>
+	</p>
+</body>
+
+</html>

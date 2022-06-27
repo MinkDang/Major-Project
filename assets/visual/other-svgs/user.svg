@@ -1,0 +1,7 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="user">
+<circle id="user-background" cx="15" cy="15" r="14.5" stroke="black"/>
+<path id="Vector" d="M22 23V21.3333C22 20.4493 21.6313 19.6014 20.9749 18.9763C20.3185 18.3512 19.4283 18 18.5 18H11.5C10.5717 18 9.6815 18.3512 9.02513 18.9763C8.36875 19.6014 8 20.4493 8 21.3333V23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M15 14C17.2091 14 19 12.2091 19 10C19 7.79086 17.2091 6 15 6C12.7909 6 11 7.79086 11 10C11 12.2091 12.7909 14 15 14Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

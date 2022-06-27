@@ -1,159 +1,102 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html data-theme="light" lang="en-US">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Major Project Landing Page">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Landing Page</title>
-	<link rel="shortcut icon" type="image/png" href="./Assets/pizza.png" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Pizza Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/visual/pizza.png">
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <script src="./js/index.js" type="module" defer></script>
 </head>
 
 <body>
-	<h2>Development Roadmap</h2>
-	<a href="https://minhdangwork.notion.site/Build-b99cdbf3a1244a35a886dc8a3602236c">notion.so</a>
-	<h1>Version 1</h1>
-	<p>
-		<a href="./v1/v1.01.html">v1.01</a> shows the structure of the page with simple <code>JS</code>
-	</p>
-	<p>
-		<a href="./v1/v1.02.html">v1.02</a> optimises <code>v1.01</code> and works on minor functions
-	</p>
-	<p>
-		<a href="./v1/v1.03.html">v1.03</a> focuses on array of records and input validation
-	</p>
-	<p>
-		<a href="./v1/v1.04.html">v1.04</a> focuses on reset button and optimisation of the code, especially enforcing
-		harsher validation
-	</p>
-	<h1>Version 2</h1>
-	<p>
-		<a href="./v2/v2.01.html">v2.01</a> focuses on changing all possible <code>div</code> to <code>form</code> which
-		would be beneficial for future database implementation
-	</p>
-	<p>
-		<a href="./v2/v2.02.html">v2.02</a> focuses on the floating side bar
-	</p>
-	<p>
-		<a href="./v2/v2.03.html">v2.03</a> focuses on using <code>checked</code> attribute as a way to change buttons
-		colours
-	<details>
-		<summary>Problems</summary>
-		<p>
-		<ul>
-			<li>Selecting text on a label</li>
-			<li>Resetting undefined variables</li>
-		</ul>
-		Floating point errors that appears when 2 toppings are added and removed are mitigated
-		<strong>temporarily</strong>
-		through an <code>if</code> condition. Find more about these errors <a
-			href="https://floating-point-gui.de/">here</a></p>
-	</details>
+    <nav>
+        <header>
+            <section id="header-left">
+                <a href="../" id="homepage-link" title="Home">
+                    <img src="../assets/visual/logo.png" alt="" width="60px" height="60px" id="logo-image">
+                </a>
+            </section>
+            <ul id="header-right">
+                <li id="dropdown-menu">
+                    <svg tabindex="0" width="40" height="40" viewBox="0 0 30 30" fill="transparent">
+                        <circle id="user-background" cx="15" cy="15" r="14.5" />
+                        <path
+                            d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M23.75 16.25C24.4404 16.25 25 15.6904 25 15C25 14.3096 24.4404 13.75 23.75 13.75C23.0596 13.75 22.5 14.3096 22.5 15C22.5 15.6904 23.0596 16.25 23.75 16.25Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M6.25 16.25C6.94036 16.25 7.5 15.6904 7.5 15C7.5 14.3096 6.94036 13.75 6.25 13.75C5.55964 13.75 5 14.3096 5 15C5 15.6904 5.55964 16.25 6.25 16.25Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <ul id="dropdown-menu-hidden">
+                        <li><a href="./menu/pizza.html" class="hover-lightyellow">Menu</a></li>
+                        <li><a href="./information/store-finder.html" class="hover-lightyellow">Stores</a></li>
+                        <li><a href="./information/contact.html" class="hover-lightyellow">Contact Us</a></li>
+                    </ul>
+                </li>
 
-	<br>
-	An error that could not be resolved is related to the behaviour of <code>checked</code> attribute in
-	<code>checkbox</code>. This error does not prove to be dangerous to the user experience and security. It will be
-	patched if possible in future versions
-	</p>
-	<p>
-		<a href="./v2/v2.04.html">v2.04</a> focuses on randomise pizza choice. The <code>checked</code> attribute bug is
-		still persist
-	</p>
-	<p>
-		<a href="./v2/v2.05.html">v2.05</a> focuses on
-		<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local">
-			<code>
-				datetime-local
-			</code>
-		</a>
-		behaviour. The <code>checked</code> attribute is fixed
-	<details>
-		<summary>Other Changes</summary>
-		<ul>
-			<li>Change how price is calculated</li>
-			<li>Let <code>checked</code> attribute decided by native behaviour</li>
-			<li>Min and Max <code>datetime-local</code> changes</li>
-			<li><code>datetime-local</code> box glowed when change is made</li>
-			<li>Update later time selection</li>
-			<li>Random button tooltip change when button is clicked</li>
-		</ul>
-	</details>
-	</p>
-	<p>
-		<a href="./v2/v2.06.html">v2.06</a> focuses on code styling and optimisation of the code base
-	<ul>
-		<li>
-			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript">MDN JS
-				Guidelines</a>
-		</li>
-		<li>
-			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/HTML">MDN HTML
-				Guidelines</a>
-		</li>
-		<li>
-			<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/CSS">MDN CSS Guidelines</a>
-		</li>
-		<li>
-			<a href="https://github.com/airbnb/javascript">Airbnb JS Guidelines</a>
-		</li>
-	</ul>
-	<details>
-		<summary>List of improvements</summary>
-		<ul>
-			<li><strong><code>HTML</code></strong>
-				<ul>
-					<li>Matching MDN HTML Guidelines</li>
-					<li>Change sidebar container from <code>span</code> to <code>a</code> for native site linking</li>
-					<li>Update quantity keystroke block from <code>event.keycode</code> <i>(deprecated)</i> to
-						<code>event.key</code>
-					</li>
-					<li>Submit and Reset is now <code>button</code> instead of <code>div</code></li>
-				</ul>
-			</li>
-			<li><strong><code>HTML & JS</code></strong>
-				<ul>
-					<li>Trigger events on input instead of label to increase accessibility</li>
-					<li>Move events to JS (remove all function call from HTML)</li>
-					<li>Remove Credit Card <code>readOnly</code></li>
-					<li>Better <code>regex</code> validation</li>
-				</ul>
-			</li>
-			<li><strong><code>JS</code></strong>
-				<ul>
-					<li>Matching Airbnb and MDN Guidelines</li>
-					<li><a href="https://eslint.org/">ESLint</a> used</li>
-					<li>Different time input styling for Chrome</li>
-					<li>More <code>arrow function</code> usage</li>
-					<li>More ternary operator whenever possible</li>
-					<li>Logistic Handling is shorten (20 lines to 15 lines)</li>
-					<li><code>Dictionaries</code> are used to replace <code>if else</code> if possible</li>
-					<li>Intervals are global variables</li>
-					<li>Let <code>enforceTimeRestrictions()</code> handle time update in when user chooses "Now"</li>
-					<li>Submit button blurred when there are errors within the order</li>
-					<li><code>textarea</code> scroll to bottom when appending order</li>
-					<li><code>input</code> related errors in resetButton is fixed</li>
-				</ul>
-			</li>
-			<li><strong><code>CSS</code></strong>
-				<ul>
-					<li>Matching MDN CSS Guidelines</li>
-					<li><code>:focus-visible</code> used to increase accessibility</li>
-					<li>Remove unnecessary vendor prefixes, rules</li>
-					<li><code>input</code> display is not <code>none</code>, <code>opacity: 0; margin: 0;</code> is used
-						instead to increase accessibility</li>
-					<li>Smoother animation</li>
-				</ul>
-			</li>
-		</ul>
-	</details>
-	</p>
-	<p>
-		<a href="./v2/v2.07.html">v2.07</a> focuses on changing how CSS works fundamentally. <code>alert()</code> is
-		replaced by a pop up notification. Minor accessibility improvements are included.
-		A notable accessibility issues that will be mitigated in the future is the difficulty when selecting time
-		without a mouse. <code>datetime-local</code> is going to be replaced by a better alternative in the near future.
-	</p>
+                <li>
+                    <a href="./account/login.html" id="account-button" title="Account Log In / Sign Up">
+                        <svg width="40" height="40" viewBox="0 0 30 30" fill="transparent">
+                            <g id="user">
+                                <circle id="user-background" cx="15" cy="15" r="14.5" />
+                                <path class="user-strokes"
+                                    d="M22 23V21.3333C22 20.4493 21.6313 19.6014 20.9749 18.9763C20.3185 18.3512 19.4283 18 18.5 18H11.5C10.5717 18 9.6815 18.3512 9.02513 18.9763C8.36875 19.6014 8 20.4493 8 21.3333V23"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path class="user-strokes"
+                                    d="M15 14C17.2091 14 19 12.2091 19 10C19 7.79086 17.2091 6 15 6C12.7909 6 11 7.79086 11 10C11 12.2091 12.7909 14 15 14Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </header>
+    </nav>
+    <main>
+        <div id="background"></div>
+        <form id="logistic-option-form" autocomplete="off">
+            <input type="radio" name="logistic" value="delivery" id="delivery" checked>
+            <label for="delivery">Delivery</label>
+            <input type="radio" name="logistic" value="pickup" id="pickup">
+            <label for="pickup">Pickup</label>
+        </form>
+        <form id="logistic-value-form" autocomplete="off">
+            <fieldset>
+                <div>
+                    <legend>Enter your <span class="logistic-value">delivery address</span></legend>
+                    <button type="button" id="cancel-button">Cancel</button>
+                </div>
+
+                <p id="location-warning">Please enter <span class="logistic-value">delivery address</span></p>
+                <input type="text" name="location" id="location" placeholder="e.g. 1 Bridge Rd, Glebe" maxlength="150">
+                <button type="button" id="order-now-button">Order Now</button>
+                <section id="autocomplete-section">
+                    <p id="autocomplete-information-text"></p>
+                    <ul id="autocomplete-entries"></ul>
+                    <div id="excess-result-page-switch">
+                        <input type="radio" name="page" value="backward" id="backward-button" class="block-click">
+                        <label for="backward-button">Back</label>
+                        <input type="radio" name="page" value="forward" id="forward-button">
+                        <label for="forward-button">Next</label>
+                    </div>
+                </section>
+            </fieldset>
+            <section id="logistic-value-found">
+                <p></p>
+                <button type="button" id="logistic-value-found-change">Change</button>
+                <button type="button" id="logistic-value-found-resume">Resume your Order</button>
+            </section>
+        </form>
+    </main>
+    <!-- TODO: Add Footer -->
+    <footer></footer>
 </body>
 
 </html>

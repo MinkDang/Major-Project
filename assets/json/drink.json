@@ -1,0 +1,180 @@
+{
+    "cold drinks": [
+        {
+            "name": "Coca-Cola® Classic 1.25L",
+            "tag": [],
+            "energy": "2250 kJ",
+            "description": "Nothing beats the taste of Coca-Cola® Classic. Refresh with the authentic Coke taste, unchanged for over 129 years ",
+            "price": "5.45",
+            "imageDir": "cold-drinks-coca-cola-classic-1-25l-drinks"
+        },
+        {
+            "name": "Coca-Cola® No Sugar 1.25L",
+            "tag": [],
+            "energy": "18 kJ",
+            "description": "Coca-Cola® No Sugar is a sparkling soft drink and a great new choice for those who want the classic taste of Coke without the sugar ",
+            "price": "5.45",
+            "imageDir": "cold-drinks-coca-cola-no-sugar-1-25l-drinks"
+        },
+        {
+            "name": "Coca-Cola® Vanilla 1.25L",
+            "tag": [],
+            "energy": "2313 kJ",
+            "description": "All the refreshing taste of Coca-Cola® Classic with a sweet hint of vanilla ",
+            "price": "5.45",
+            "imageDir": "cold-drinks-coca-cola-vanilla-1-25l-drinks"
+        },
+        {
+            "name": "Diet Coke 1.25L",
+            "tag": [],
+            "energy": "24 kJ",
+            "description": "Deliciously light. Sugar free. Diet Coke delivers a distinct, unique and lighter taste to Coca-Cola Classic. ",
+            "price": "5.45",
+            "imageDir": "cold-drinks-coca-cola-diet-1-25l-drinks"
+        },
+        {
+            "name": "Coca-Cola® Classic 600ml",
+            "tag": [],
+            "energy": "1080 kJ",
+            "description": "Nothing beats the taste of Coca-Cola® Classic. Refresh with the authentic Coke taste, unchanged for over 129 years ",
+            "price": "4.45",
+            "imageDir": "cold-drinks-coca-cola-classic-600ml-drinks"
+        },
+        {
+            "name": "Coca-Cola® No Sugar 600ml",
+            "tag": [],
+            "energy": "8 kJ",
+            "description": "Coca-Cola® No Sugar is a sparkling soft drink and a great new choice for those who want the classic taste of Coke without the sugar ",
+            "price": "4.45",
+            "imageDir": "cold-drinks-coca-cola-no-sugar-600ml-drinks"
+        },
+        {
+            "name": "Coca-Cola® Vanilla 600ml",
+            "tag": [],
+            "energy": "1110 kJ",
+            "description": "All the refreshing taste of Coca-Cola® Classic with a sweet hint of vanilla",
+            "price": "4.45",
+            "imageDir": "cold-drinks-coca-cola-vanilla-600ml-drinks"
+        },
+        {
+            "name": "Coca-Cola® Classic 375ml",
+            "tag": [],
+            "energy": "675 kJ",
+            "description": "Nothing beats the taste of Coca-Cola® Classic. Refresh with the authentic Coke taste, unchanged for over 129 years ",
+            "price": "3.45",
+            "imageDir": "cold-drinks-coca-cola-classic-375ml-drinks"
+        },
+        {
+            "name": "Coca-Cola® No Sugar 375ml",
+            "tag": [],
+            "energy": "5 kJ",
+            "description": "Coca-Cola® No Sugar is a sparkling soft drink and a great new choice for those who want the classic taste of Coke without the sugar ",
+            "price": "3.45",
+            "imageDir": "cold-drinks-coca-cola-no-sugar-375ml-drinks"
+        },
+        {
+            "name": "Coca-Cola® Vanilla 375ml",
+            "tag": [],
+            "energy": "694 kJ",
+            "description": "All the refreshing taste of Coca-Cola® Classic with a sweet hint of vanilla ",
+            "price": "3.45",
+            "imageDir": "cold-drinks-coca-cola-vanilla-375ml-drinks"
+        },
+        {
+            "name": "Diet Coke 375ML",
+            "tag": [],
+            "energy": "11 kJ",
+            "description": "Deliciously light. Sugar free. Diet Coke delivers a distinct, unique and lighter taste to Coca-Cola Classic. ",
+            "price": "3.45",
+            "imageDir": "cold-drinks-coca-cola-diet-375ml-drinks"
+        },
+        {
+            "name": "Fanta® 1.25L",
+            "tag": [],
+            "energy": "1710 kJ",
+            "description": "Bright, bubbly and popular, Fanta® is the orange soft drink with a tingly, fruity and bold taste ",
+            "price": "5.45",
+            "imageDir": "cold-drinks-fanta-orange-1-25l-drinks"
+        },
+        {
+            "name": "Fanta® 600ml",
+            "tag": [],
+            "energy": "821 kJ",
+            "description": "Bright, bubbly and popular, Fanta® is the orange soft drink with a tingly, fruity and bold taste ",
+            "price": "4.45",
+            "imageDir": "cold-drinks-fanta-orange-600ml-drinks"
+        },
+        {
+            "name": "Fanta® 375ml",
+            "tag": [],
+            "energy": "513 kJ",
+            "description": "Bright, bubbly and popular, Fanta® is the orange soft drink with a tingly, fruity and bold taste ",
+            "price": "3.45",
+            "imageDir": "cold-drinks-fanta-orange-375ml-drinks"
+        },
+        {
+            "name": "Lift® Hard Hitting Lemon 1.25L",
+            "tag": [],
+            "energy": "1908 kJ",
+            "description": "Lift® Hard Hitting Lemon soft drink is an unexpectedly bold lemon soft drink that has more kick and offers real bite ",
+            "price": "5.45",
+            "imageDir": "cold-drinks-lift-1-25l-drinks"
+        },
+        {
+            "name": "Lift® Hard Hitting Lemon 600ml",
+            "tag": [],
+            "energy": "916 kJ",
+            "description": "Lift® Hard Hitting Lemon soft drink is an unexpectedly bold lemon soft drink that has more kick and offers real bite ",
+            "price": "4.45",
+            "imageDir": "cold-drinks-lift-600ml-drinks"
+        },
+        {
+            "name": "Lift® Hard Hitting Lemon 375ml",
+            "tag": [],
+            "energy": "573 kJ",
+            "description": "Lift® Hard Hitting Lemon soft drink is an unexpectedly bold lemon soft drink that has more kick and offers real bite ",
+            "price": "3.45",
+            "imageDir": "cold-drinks-lift-375ml-drinks"
+        },
+        {
+            "name": "Sprite® 1.25L",
+            "tag": [],
+            "energy": " kJ",
+            "description": "With its clean, crisp, lemon-lime taste, Sprite® quenches your thirst with a hit of refreshment ",
+            "price": "5.45",
+            "imageDir": "cold-drinks-sprite-1-25l-drinks"
+        },
+        {
+            "name": "Sprite® 600ml",
+            "tag": [],
+            "energy": " kJ",
+            "description": "With its clean, crisp, lemon-lime taste, Sprite® quenches your thirst with a hit of refreshment ",
+            "price": "4.45",
+            "imageDir": "cold-drinks-sprite-600ml-drinks"
+        },
+        {
+            "name": "Sprite® 375ml",
+            "tag": [],
+            "energy": " kJ",
+            "description": "With its clean, crisp, lemon-lime taste, Sprite® quenches your thirst with a hit of refreshment ",
+            "price": "3.45",
+            "imageDir": "cold-drinks-sprite-375ml-drinks"
+        },
+        {
+            "name": "Mount Franklin® Lightly Sparkling Water 450ml",
+            "tag": [],
+            "energy": "0 kJ",
+            "description": "Pure Australian Still Spring bottled Water of exceptional quality and purity as nature intended ",
+            "price": "4.45",
+            "imageDir": "cold-drinks-mount-franklin-sparkling-water-drinks"
+        },
+        {
+            "name": "Mount Franklin 600ml",
+            "tag": [],
+            "energy": "0 kJ",
+            "description": "Pure Australian Still Spring bottled Water of exceptional quality and purity as nature intended ",
+            "price": "4.45",
+            "imageDir": "cold-drinks-mount-franklin-still-water-drinks"
+        }
+    ]
+}

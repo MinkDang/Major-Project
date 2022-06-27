@@ -1,0 +1,371 @@
+/* 
+CSS Organisation rules
+	~ Display
+	~ Positioning
+	~ Box-model
+	~ Typography
+	~ Manipulation
+	~ Misc
+*/
+
+.no-dot-point {
+	list-style-type: none;
+}
+
+.separation-bar {
+	border-top: 2px solid #dddedf;
+	border-bottom: 2px solid #dddedf;
+}
+
+#menu-filter {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: white;
+	z-index: 10;
+}
+
+#menu-navigation,
+#menu-filter > div {
+	display: flex;
+	align-items: center;
+	width: 1000px;
+	height: 50px;
+}
+
+/* menu-navigation and price-display */
+
+#menu-navigation {
+	justify-content: space-around;
+}
+
+#menu-navigation > ul {
+	display: flex;
+	flex: auto;
+	gap: 10px;
+	height: 100%;
+	text-decoration: none;
+}
+
+#menu-navigation > ul > li {
+	display: flex;
+	align-items: center;
+}
+
+#menu-navigation > ul > li > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70%;
+	padding: 0 10px 0 10px;
+	border-radius: 5px;
+	color: black;
+	font-size: 1.2em;
+	text-decoration: none;
+	background-color: none;
+}
+
+#menu-navigation > ul > li > a {
+	transition: background-color 0.3s !important;
+}
+
+#menu-navigation > ul > li > a:hover,
+#menu-navigation > ul > li > a:focus {
+	background-color: #ebd265;
+}
+
+/* menu-filter */
+
+#menu-filter {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+#menu-filter-form {
+	display: flex;
+	align-items: center;
+	flex: auto;
+	gap: 10px;
+	margin-left: 10px;
+}
+
+input[name="menu-filter"] {
+	opacity: 0;
+	position: absolute;
+}
+
+input[name="menu-filter"]:checked + label {
+	outline: 2px solid #ebd265;
+	box-shadow: rgba(235, 210, 101, 0.8) 0px 0px 10px;
+	color: #75670c;
+	transition: all 0.2s ease-out;
+}
+
+input[name="menu-filter"]:focus + label {
+	outline: 2px solid gray;
+}
+
+input[name="menu-filter"]:checked:focus + label {
+	outline: 2px solid #86671e;
+	box-shadow: rgba(235, 210, 101, 0.8) 0px 0px 20px;
+}
+
+.menu-filter-label {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 5px 10px 5px 10px;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	font-size: 1.1em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.menu-filter-label svg {
+	width: 20px;
+	height: 20px;
+}
+
+.menu-filter-label:hover {
+	outline: 2px solid gray;
+}
+
+#price-display {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	height: 80%;
+	padding: 0 10px 0 10px;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+	color: black;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	background-color: #ebdea6;
+}
+
+#price-display-injection {
+	font-size: 1.4em;
+}
+
+#price-display:hover,
+#price-display:focus {
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+	background-color: #ebd265;
+}
+
+.price-display-change-flash {
+	-webkit-animation: priceFlash 0.5s ease-out 0s;
+	animation: priceFlash 0.5s ease-out 0s;
+}
+
+@-webkit-keyframes priceFlash {
+	0% {
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+		background-color: #ebdea6;
+	}
+	50% {
+		box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+		background-color: #b9a02d;
+	}
+	100% {
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+		background-color: #ebdea6;
+	}
+}
+
+@keyframes priceFlash {
+	0% {
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+		background-color: #ebdea6;
+	}
+	50% {
+		box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+		background-color: #b9a02d;
+	}
+	100% {
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+		background-color: #ebdea6;
+	}
+}
+
+/* main stuff */
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	margin: 10px 0 50px 0;
+}
+
+.menu-section {
+	display: flex;
+	width: 100%;
+	max-width: 1000px;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.menu-section-title {
+	width: 100%;
+}
+
+.menu-section-title > h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.menu-section-title > h2 > span {
+	margin: 0 10px 0 10px;
+	font-weight: 550;
+	white-space: nowrap;
+}
+
+.menu-section-title ::before,
+.menu-section-title ::after {
+	background-color: #dfdfe3;
+	content: "";
+	height: 2px;
+	position: relative;
+	top: 0px;
+	width: 100%;
+}
+
+.menu-card {
+	display: flex;
+	flex-direction: column;
+	width: 240px;
+	background-color: white;
+	padding: 2px;
+	border-radius: 5px;
+	transition: box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+		rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+		rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.menu-card img {
+	width: 100%;
+}
+
+.menu-card-data {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 10px;
+	height: 100%;
+}
+
+.card-title {
+	flex: auto;
+	font-weight: 500;
+	letter-spacing: 1.2px;
+}
+
+.menu-calorie-display {
+	color: #b5b6bd;
+	font-size: 0.94em;
+}
+
+.card-information > p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	color: #6b6e79;
+	word-wrap: break-word;
+	overflow: hidden;
+	font-size: 0.9em;
+	line-height: 1.2em;
+}
+
+.card-information {
+	flex: auto;
+}
+
+.expand-close-anchor {
+	color: #6b6e79;
+	font-size: 0.9em;
+}
+
+fieldset {
+	border: 0;
+	margin: 10px 0 10px 0;
+}
+
+.card-size-customisation {
+	margin-top: 5px;
+	width: 100%;
+	padding: 5px;
+	font-size: 0.95rem;
+	border-radius: 5px;
+	border: 1px solid #dfdfe3;
+	transition: all 0.1s ease;
+	background-color: white;
+}
+
+.card-size-customisation:hover {
+	border: 1px solid black;
+}
+
+.card-size-customisation:focus {
+	outline: 1px solid black;
+}
+
+.add-to-cart {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	font-size: 1.05em;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	border: none;
+	background-color: rgba(196, 117, 0, 0.8);
+	transition: background-color 0.3s;
+}
+
+.add-to-cart:hover,
+.add-to-cart:focus {
+	background-color: rgba(196, 117, 0, 1);
+}
+
+/* card svgs */
+
+.card-heading {
+	display: flex;
+}
+
+.card-tag {
+	display: flex;
+	height: 100%;
+}
+
+.card-svg {
+	background-size: 18px;
+	width: 18px;
+	height: 18px;
+	margin-left: 5px;
+}
+
+.svg-vegan {
+	background-image: url(../../assets/visual/pizza-filter/vegan.svg);
+}
+
+.svg-vegetarian {
+	background-image: url(../../assets/visual/pizza-filter/vegetarian.svg);
+}
+
+.svg-spicy {
+	background-image: url(../../assets/visual/pizza-filter/spicy.svg);
+}
