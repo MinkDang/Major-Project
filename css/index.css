@@ -1,0 +1,298 @@
+@import "./universal.css";
+
+/* 
+CSS Organisation rules
+	~ Display
+	~ Positioning
+	~ Box-model
+	~ Typography
+	~ Manipulation
+	~ Misc
+*/
+
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	padding-top: 100px;
+}
+
+/*  Blur */
+.background-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: calc(100vh - 80px);
+	z-index: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+form {
+	width: 500px;
+	font-size: 1.2em;
+	z-index: 1;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* Logistic Option */
+
+#logistic-option-form {
+	display: flex;
+	height: 2em;
+	font-size: 1.4rem;
+}
+
+input[name="logistic"],
+input[name="page"] {
+	position: fixed;
+	width: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+input[name="logistic"] + label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 100%;
+	border-radius: 0.4em 0.4em 0 0;
+	background-color: #dfdfe3;
+	transition: height 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+input[name="logistic"]:checked + label {
+	height: calc(100% + 0.7em);
+	box-shadow: rgba(27, 31, 35, 0.04) 0px -1px 0px,
+		rgba(255, 255, 255, 0.25) 0px -1px 0px inset;
+	color: rgb(255, 136, 0);
+	transform: translateY(-0.7em);
+	background-color: white;
+}
+
+/* Navigation by tabs */
+input[name="logistic"]:focus-visible + label,
+input[name="page"]:focus-visible + label {
+	outline: 3px solid black;
+}
+
+/* Logistic Value */
+
+#logistic-value-form {
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	border-radius: 0 0 10px 10px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+		rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+	background-color: white;
+}
+
+fieldset {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	border: 0;
+	margin: 20px;
+}
+
+legend {
+	padding-bottom: 10px;
+	font-weight: 550;
+}
+
+#location {
+	flex: auto;
+	height: 3rem;
+	max-width: 460px;
+	box-sizing: border-box;
+	padding: 1rem;
+	border: 1px solid #dfdfe3;
+	border-radius: 0.3rem;
+	font-size: 1.3rem;
+}
+
+/* Buttons */
+
+button,
+#excess-result-page-switch label {
+	display: flex;
+	align-items: center;
+	height: 3rem;
+	padding: 1rem 0.7rem 1rem 0.7rem;
+	margin-left: 0.3em;
+	border: none;
+	border-radius: 0.3rem;
+	color: white;
+	font-size: 1.25rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	background-color: rgba(196, 117, 0, 0.8);
+}
+
+button:hover,
+#excess-result-page-switch label:hover,
+button:focus,
+#excess-result-page-switch label:focus {
+	background-color: rgba(196, 117, 0, 1);
+}
+
+/* Empty warning */
+
+#location-warning {
+	display: none;
+	flex: auto;
+	position: relative;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	margin: 0.5em 0 1em 0;
+	border-radius: 0.3rem;
+	background-color: #fed03b;
+}
+
+#location-warning::after {
+	content: "";
+	position: absolute;
+	left: 30px;
+	bottom: -7.5px;
+	width: 15px;
+	height: 15px;
+	transform: rotate(45deg);
+	background-color: #fed03b;
+}
+
+/* Autocomplete Section */
+
+#autocomplete-section {
+	position: relative;
+	top: 10px;
+	width: 100%;
+	border-radius: 0.3rem;
+	background-color: #e9ebee;
+}
+
+#autocomplete-information-text {
+	display: none;
+	padding: 0.5em 0.9em 0.3em 0.9em;
+	font-size: 1rem;
+}
+
+#autocomplete-entries {
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+#autocomplete-entries li {
+	display: flex;
+	align-items: center;
+	padding: 0.3em 0.7em 0.3em 0.7em;
+	border: 1px solid #e9ebee;
+	border-radius: 0.3rem;
+	list-style-type: none;
+	background-color: white;
+}
+
+#autocomplete-entries li div {
+	flex: auto;
+	max-width: 325px;
+	overflow-x: hidden;
+}
+
+.fade-right {
+	-webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
+	mask-image: linear-gradient(to right, black 50%, transparent 100%);
+}
+
+#autocomplete-entries li button {
+	height: -webkit-min-content;
+	height: -moz-min-content;
+	height: min-content;
+	padding: 0.5em 1em 0.5em 1em;
+}
+
+/* Page Switching */
+
+#excess-result-page-switch {
+	display: none;
+	justify-content: center;
+	-moz-column-gap: 10px;
+	column-gap: 10px;
+	background-color: white;
+}
+
+#excess-result-page-switch label {
+	padding: 0 0.8em 0 0.8em;
+	margin: 0.7rem 0 0.5rem 0;
+}
+
+.block-click + label {
+	background-color: #e2e2e6 !important; /* Overwrite the default button colour */
+	cursor: not-allowed !important;
+}
+
+/* Changing Address */
+
+#logistic-value-found {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin: 20px;
+}
+
+#logistic-value-found p {
+	text-transform: capitalize;
+	word-break: break-all;
+}
+
+#logistic-value-found button {
+	justify-content: center;
+	margin: 3px 0 0 0;
+}
+
+#logistic-value-found-change {
+	border: 2px solid #94938e;
+	color: black;
+	background-color: white;
+}
+
+#logistic-value-found-change:hover,
+#logistic-value-found-change:focus {
+	background-color: #ebd265;
+}
+
+fieldset > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+fieldset > div > button {
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	padding: 2px 10px 2px 10px;
+	border: 2px solid #94938e;
+	margin-bottom: 10px;
+	color: black;
+	background-color: white;
+}
+
+fieldset > div > button:hover,
+fieldset > div > button:focus {
+	background-color: #ebd265;
+}

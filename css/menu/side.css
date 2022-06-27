@@ -1,0 +1,11 @@
+@import "../universal.css";
+@import "./menu.css";
+
+#menu-navigation > ul > li:nth-child(2) > a {
+	color: white;
+	background-color: #c47500;
+}
+
+.add-to-cart {
+	margin-top: 10px;
+}

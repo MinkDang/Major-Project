@@ -1,0 +1,188 @@
+/* 
+CSS Organisation rules
+	~ Display
+	~ Positioning
+	~ Box-model
+	~ Typography
+	~ Manipulation
+	~ Misc
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+*:focus {
+	outline: 2px solid black;
+}
+
+html {
+	font-family: Arial, sans-serif;
+	background-color: #f6f6f6;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background-color: white;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 1000px;
+	height: 75px;
+	padding-top: 5px;
+}
+
+header a {
+	color: black;
+	text-decoration: none;
+}
+
+header ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 1.15em;
+	letter-spacing: 0.05em;
+	list-style-type: none;
+}
+
+header ul li {
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	position: relative;
+}
+
+svg {
+	display: block;
+}
+
+#homepage-link {
+	margin-right: 10px;
+}
+
+#logo-image {
+	display: block;
+}
+
+#dropdown-menu {
+	position: relative;
+}
+
+#account-button:hover svg,
+#account-button:focus svg,
+#dropdown-menu:hover svg,
+#dropdown-menu:focus-within svg {
+	fill: #ebdea6;
+}
+
+#account-button svg,
+#dropdown-menu svg {
+	transition: fill 0.3s ease;
+}
+
+#dropdown-menu-hidden {
+	position: absolute;
+	right: 70px;
+	white-space: nowrap;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 100;
+	transition: all 0.3s ease;
+}
+
+#dropdown-menu-hidden::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-webkit-filter: blur(7px);
+	filter: blur(7px);
+	z-index: -1;
+	background-color: white;
+}
+
+#dropdown-menu:hover #dropdown-menu-hidden,
+#dropdown-menu:focus-within #dropdown-menu-hidden {
+	visibility: visible;
+	opacity: 1;
+}
+
+#header-left {
+	display: flex;
+	align-items: center;
+	flex: auto;
+	max-width: 60%;
+}
+
+#logistic-display {
+	display: flex;
+	align-items: center;
+	width: 80%;
+	padding: 10px;
+	font-size: 1.1em;
+	-webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+	mask-image: linear-gradient(to right, black 80%, transparent 100%);
+}
+
+#logistic-display span {
+	display: flex;
+	align-items: center;
+}
+
+.hover-lightyellow {
+	position: relative;
+	border-radius: 5px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.hover-lightyellow::before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	border-radius: 5px;
+	z-index: -1;
+	transition: all 0.3s ease;
+}
+
+.hover-lightyellow:hover::before,
+.hover-lightyellow:focus::before {
+	background-color: #ebdea6;
+}
+
+#logistic-display span,
+#logistic-display svg {
+	flex-shrink: 0;
+	max-width: 100%;
+	margin-right: 5px;
+}
+
+#logistic-address {
+	margin-top: 2px;
+	border-bottom: 3px dotted black;
+	white-space: nowrap;
+	overflow: hidden;
+}

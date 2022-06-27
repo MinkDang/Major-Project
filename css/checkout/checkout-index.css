@@ -1,0 +1,158 @@
+@import "../universal.css";
+
+/* 
+CSS Organisation rules
+	~ Display
+	~ Positioning
+	~ Box-model
+	~ Typography
+	~ Manipulation
+	~ Misc
+*/
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	margin: 50px 0 50px 0;
+}
+
+main > section {
+	display: flex;
+	width: 100%;
+	max-width: 1000px;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.section-title {
+	width: 100%;
+}
+
+.section-title > h2 {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.section-title > h2 > span {
+	margin-right: 20px;
+	white-space: nowrap;
+}
+
+.section-title ::after {
+	background-color: #dfdfe3;
+	content: "";
+	height: 5px;
+	position: relative;
+	top: 0px;
+	width: 100%;
+}
+
+/* Table */
+
+#table-wrapper {
+	width: 100%;
+	border-radius: 15px;
+	overflow: hidden;
+	border: 2px solid rgb(200, 200, 200);
+}
+
+table {
+	border-radius: 5px;
+	width: 100%;
+	border-collapse: collapse;
+	letter-spacing: 1px;
+}
+
+thead {
+	background-color: #ebdea6;
+}
+
+td,
+th {
+	border: 0.5px solid rgb(190, 190, 190);
+	padding: 5px 10px;
+}
+
+td {
+	text-align: center;
+}
+
+.quantity-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.quantity {
+	padding: 5px;
+}
+
+.quantity-container > svg:hover,
+.quantity-container svg:focus {
+	border-radius: 50%;
+	fill: #ebd265;
+}
+
+.table-pizza-name {
+	width: 500px;
+}
+
+/* Personal Details */
+
+#personal-details-form {
+	background-color: white;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	border-radius: 5px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 15px 10px 15px 20px;
+	font-size: 1.1em;
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+	height: 30px;
+}
+
+.input-container label {
+	font-size: 1.2em;
+}
+
+.input-container input {
+	height: 100%;
+	flex: auto;
+	margin-left: 10px;
+	border-radius: 5px;
+	font-size: 1.1em;
+	background-color: rgba(235, 222, 166, 0.5);
+	padding: 0 10px 0 10px;
+}
+
+#complete-order-button {
+	display: flex;
+	align-items: center;
+	height: 3rem;
+	padding: 1rem 0.7rem 1rem 0.7rem;
+	margin-left: 0.3em;
+	border: none;
+	border-radius: 0.3rem;
+	color: white;
+	font-size: 1.25rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	background-color: rgba(196, 117, 0, 0.8);
+}
+
+#complete-order-button:hover,
+#complete-order-button:focus {
+	background-color: rgba(196, 117, 0, 1);
+}

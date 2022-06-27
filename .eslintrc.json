@@ -6,7 +6,8 @@
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaVersion": "latest",
+        "sourceType": "module"
     },
     "rules": {
         "no-new-object": "error",
@@ -30,7 +31,10 @@
         ],
         "indent": [
             "error",
-            "tab"
+            "tab", 
+            {
+                "SwitchCase": 1
+            }
         ],
         "key-spacing": "warn",
         "space-before-blocks": "error",
