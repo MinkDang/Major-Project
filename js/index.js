@@ -119,7 +119,7 @@ function formAutocomplete(logisticType) {
 }
 
 async function autocompleteSearchPostcodes(searchText) {
-	const response = await fetch('../assets/json/nsw_postcodes.json');
+	const response = await fetch('./assets/json/nsw_postcodes.json');
 	const postcodes = await response.json();
 
 	return postcodes.filter(data => {
