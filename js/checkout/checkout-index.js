@@ -98,6 +98,7 @@ function quantityIncreaseDecreaseEventListenerActivation(increaseButtons, decrea
 		let priceLocalStorage = Number(localStorage.getItem("cartPrice"));
 		priceLocalStorage += Number(quantitySpan.closest("tr").querySelector(".price").textContent.slice(1)) / Number(quantitySpan.textContent);
 		localStorage.setItem("cartPrice", priceLocalStorage.toFixed(2));
+		displayPriceTable();
 	}));
 
 	[...decreaseButtons].forEach(button => button.addEventListener("click", () => {
@@ -114,9 +115,8 @@ function quantityIncreaseDecreaseEventListenerActivation(increaseButtons, decrea
 		let priceLocalStorage = Number(localStorage.getItem("cartPrice"));
 		priceLocalStorage -= Number(quantitySpan.closest("tr").querySelector(".price").textContent.slice(1)) / Number(quantitySpan.textContent);
 		localStorage.setItem("cartPrice", priceLocalStorage.toFixed(2));
+		displayPriceTable();
 	}));
-
-	displayPriceTable();
 }
 
 function checkLogisticForRedirection() {
