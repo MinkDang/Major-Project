@@ -1,12 +1,14 @@
-import { storageLogisticValidation } from "./menu/menu.js";
+import { storageLogisticValidation, toSentenceCase } from "./modules.js";
 
 // || Events
 
-// [01] Check for saved address
-window.addEventListener("DOMContentLoaded", () =>
+// [01] Check for saved address + Prompt if coming from checkout
+window.addEventListener("load", () => {
 	displaySavedAddressOptions(
 		localStorage, storageLogisticValidation, document.querySelector("#logistic-value-found > p")
-	));
+	);
+	promptForUnfinishedLogisticOrder();
+});
 
 // [02] Change Address Button
 document.getElementById("logistic-value-found-change").addEventListener("click", () =>
@@ -56,9 +58,6 @@ document.getElementById("location").addEventListener("keydown", e => {
 			}
 		})
 );
-
-// [10]
-window.addEventListener("DOMContentLoaded", () => promptForUnfinishedLogisticOrder());
 
 // || Functions
 
@@ -166,7 +165,7 @@ function autocompleteSearchPostcodeChoicesPageSwitch(pageSwitchButtons, pageCont
 	const finalPageCount = Math.ceil(pageContents.length / 5 - 1);
 	let currentPageCount = 0;
 
-	const forwardBackward = (buttonClicked) => {
+	const forwardBackward = buttonClicked => {
 		if ((currentPageCount === finalPageCount && buttonClicked === "forward") || (currentPageCount === 0 && buttonClicked === "backward")) {
 			return;
 		}
@@ -212,9 +211,9 @@ function autocompleteSearchProceedToOrder() {
 		const logisticType = document.querySelector("input[name='logistic']:checked").value;
 
 		if (logisticType === "delivery") {
-			logisticAddress = logisticAddress.trim().toLowerCase().replace(/\w\S*/g, w => w.replace(/^\w/, c => c.toUpperCase()));
+			logisticAddress = toSentenceCase(logisticAddress.trim());
 		} else {
-			logisticAddress = logisticAddress.slice(0, -3).toLowerCase().replace(/\w\S*/g, w => w.replace(/^\w/, c => c.toUpperCase())) + logisticAddress.slice(-3);
+			logisticAddress = toSentenceCase(logisticAddress.slice(0, -3)) + logisticAddress.slice(-3);
 		}
 
 		let storageLogisticData = {
